@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IOS_UIKit_TableView_CollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1000" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Tae-5j-XTy">
+                                <rect key="frame" x="0.0" y="44" width="414" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="8Nn-Ag-FNc"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IGw-SP-Nhe">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="oil-QT-20Z"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="MUn-Vd-f44"/>
+                                </connections>
+                            </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zuf-Vj-62x">
+                                <rect key="frame" x="0.0" y="254" width="414" height="642"/>
+                                <color key="backgroundColor" name="viewsBackground"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="hfW-Yb-8VO"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="B32-4C-q2p"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Zuf-Vj-62x" secondAttribute="trailing" id="1hN-za-jfH"/>
+                            <constraint firstAttribute="trailing" secondItem="Tae-5j-XTy" secondAttribute="trailing" id="7jm-N6-0pO"/>
+                            <constraint firstItem="Tae-5j-XTy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Atd-sz-6Y2"/>
+                            <constraint firstItem="Tae-5j-XTy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GJj-bw-ssM"/>
+                            <constraint firstItem="Zuf-Vj-62x" firstAttribute="top" secondItem="Tae-5j-XTy" secondAttribute="bottom" constant="10" id="XMR-B2-RTv"/>
+                            <constraint firstItem="Zuf-Vj-62x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="af7-CY-v9v"/>
+                            <constraint firstAttribute="bottom" secondItem="Zuf-Vj-62x" secondAttribute="bottom" id="tel-UO-F8e"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cv" destination="Tae-5j-XTy" id="AJF-xO-Cve"/>
+                        <outlet property="tv" destination="Zuf-Vj-62x" id="8aT-NW-jRx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="viewsBackground">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
